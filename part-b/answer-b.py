@@ -9,4 +9,12 @@ C = BoolVar('C')
 # and the .format() mathod to output the
 # following expression:
 
+f1 = Implies(A, B)
+f2 = Implies(B, C)
+f3 = Implies (A, C)
+f4 = And(f1, f2)
+f5 = Implies(f4, f3)
+print(f5)
+print(f5.format())
+print()
 # (((A => B) & (B => C)) => (A => C))
